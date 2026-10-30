@@ -209,5 +209,20 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+The Pakistani ID database system utilizes a family-based structural design, which might be beneficial to the authorities in terms of citizenship verification, but with a high cost of imposing a strict definition of what a family is. Thus, people whose families do not follow the traditional model (e.g. orphans and children born out of wedlock) will face challenges during record registration and may spend months or years correcting their records. Such value systems embedded in databases can also be found in day-to-day life, and they can create burdens on people who do not fit with the system, thus contributing to inequality and marginalization.
+
+The order of names makes a good example, as databases may assume a westernized naming style, composed of first, middle, and last name. However, in Korean, Chinese, and Japanese names, the last name usually comes first. Thus, people may get their name recorded reversed or mixed up in databases. Moreover, not everyone has a last name. In most of the databases, middle name is optional, but the first and last name cannot be empty. This may create inequality for people with names composed of one word, such as Tibetan people who have given names but no family names. A day-to-day example of inequality associated with single names is that travellers with single names on their passports are not allowed to enter the UAE according to the Ministry of Foreign Affairs of Singapore<sup>1</sup>. Another aspect regarding names is the length limit. Long names may get cutoff and short names composed of one or two characters may be considered as invalid in certain data systems.
+
+Romanization of names may also contribute to inequality towards people with names in a non-Latin system. For example, Chinese names can be romanized in multiple ways, including the Wade-Giles system, the Yale system, the Meyer–Wempe system, and the current Pinyin system. However, the spelling will vary across systems and depending on whether the name was originally in Mandarin or Cantonese. As a result, one person may have multiple romanized names mapped onto the original Chinese name, creating possible misidentification in databases. Another problem with romanization of names is that two people with distinct Chinese names may have the same romanized name, as the romanization is based on pronunciation. This may lead to issues in academic publications, as distinct scholars may be merged into a single person. Current publication services address this issue by allowing authors to include their Chinese names alongside corresponding romanized names, and authors are required to provide unique identifiers such as the ORCID.
+
+(1) Ministry of Foreign Affairs. _Travel page with travel advisory United Arab Emirates_. Ministry of Foreign Affairs. <https://www.mfa.gov.sg/travelling-overseas/travel-advisories-notices-and-visa-information/united-arab-emirates/> (accessed 2026-10-30)
+
+
+
+
+
+
+
+
+
 ```
