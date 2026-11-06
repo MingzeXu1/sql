@@ -57,7 +57,39 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1: Overwrite the old value with the new value
+CUSTOMER_ADDRESS       
+customer_i PK > customer_id in CUSTOMER table  
+   street
+   city     
+   province
+   zip_code
+   update_time       - contains the time when address was updated 
+- One row per customer 
+- The old address will be updated by the new one, and the old one is lost.
+   
+
+Type 2: Keeps the old address and add new rows
+CUSTOMER_ADDRES
+    address_key PK
+    custdmer_id -> customer_id in CUSTOMER table
+    street
+    city
+    province
+    zip_code
+    start_date 
+    end_date
+    is_current        - shows if this address is currently used or not, can be 0 or 1
+- Keep a history of customer addresses 
+- When a customer moves, the old address will get an end_date and will be marked as is not current
+- The new address will be added as a new row, and be marked as is current.
+
+
+
+
+
+
+
 ```
 
 ***
@@ -193,5 +225,8 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
-```
+Boykis’s article argues that AI models such as image recognition are built based on human labour and judgements, which may raise ethical problems such as biased or offensive behaviours. And such problems can be hidden and carried forward into different systems using the same database.
+
+The first problem addressed by the author is the underappreciated and undervalued labour when preparing the training dataset for AI models. The labelling of ImageNet, a massive image database built for image recognition, was done by Princeton students who were paid $10 per hour, as well as Amazon Mechanical Turk, which pays online workers several cents per task. Such low pay may raise critical societal questions, such as whether it is fair for the tech companies to take the enormous economic value while the foundational labour was paid even below the minimum wage. As a consequence of low pay, the quality of labelled data may decrease, although control group pictures are included to ameliorate such situations. 
+
+Moreover, as one model is built upon another, the bias embedded at every layer will accumulate. For example, the images in ImageNet were collected based on the WordNet synonyms, which can be traced back to the Brown Corpus built based on American English used in the 1960s. Objects that were common at that time in the US are more likely to be well represented. However, objects from other cultures or newer objects can be underrepresented, thus creating inequality across different countries. Lastly, regarding the LLM proliferation, more hidden labour will likely be required to moderate and remove offensive content. The solution for ImageNet relies on human labour. People have to review the data and remove offensive ones, potentially with psychological costs. As the scale of LLMs expands, without a proper solution for content regulation, more labels are likely to be required for such tasks, thus leading to more undervalued labour discussed previously.
